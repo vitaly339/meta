@@ -1,0 +1,1011 @@
+{
+  "meta": {
+    "title": "Веб‑разработка с нуля — 8 недель, 16 уроков",
+    "description": "Интерактивный курс с тестами и прогрессом. Порог прохождения — 70%. Доступ к следующему уроку открывается после успешного теста.",
+    "pass_threshold": 0.7
+  },
+  "weeks": [
+    {
+      "title": "Неделя 1 — Основы HTML",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Урок 1. Введение в веб и HTML",
+          "duration_min": 40,
+          "theory": [
+            "Веб работает по модели клиент–сервер: браузер (клиент) отправляет запрос к серверу и получает HTML‑страницу.",
+            "Фронтенд состоит из HTML (структура), CSS (вид), JS (логика).",
+            "HTML — язык разметки. Браузер читает теги и строит DOM‑дерево."
+          ],
+          "code": {
+            "html": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <title>Мой первый сайт</title>\n</head>\n<body>\n  <h1>Привет, мир!</h1>\n  <p>Это мой первый сайт.</p>\n</body>\n</html>"
+          },
+          "task": "Создай файл index.html, скопируй пример, запусти в браузере. Замени текст на своё имя и цель обучения.",
+          "quiz": [
+            {
+              "q": "За что отвечает HTML?",
+              "options": [
+                "За структуру",
+                "За стили",
+                "За серверную логику"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Где располагается заголовок страницы?",
+              "options": [
+                "В <body>",
+                "В <head>",
+                "В <footer>"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Что такое DOM?",
+              "options": [
+                "Дерево объектов документа",
+                "База данных",
+                "Сетевой протокол"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "К какому типу языка относится HTML?",
+              "options": [
+                "Язык программирования",
+                "Язык разметки",
+                "СУБД"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Что возвращает сервер браузеру чаще всего?",
+              "options": [
+                "PDF",
+                "HTML",
+                "EXE"
+              ],
+              "answer": 1
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Урок 2. Базовые теги и структура",
+          "duration_min": 50,
+          "theory": [
+            "Заголовки h1–h6, параграфы p, ссылки a, изображения img, списки ul/ol + li.",
+            "Атрибуты: href у ссылок, src и alt у изображений. Семантические секции: header, nav, main, section, article, footer."
+          ],
+          "code": {
+            "html": "<main>\n  <h1>Визитка</h1>\n  <img src=\"me.jpg\" alt=\"Моё фото\" width=\"160\">\n  <p>Я — начинающий веб‑разработчик.</p>\n  <ul>\n    <li>Навыки: HTML, CSS</li>\n    <li><a href=\"https://t.me/username\">Мой Telegram</a></li>\n  </ul>\n</main>"
+          },
+          "task": "Сверстай визитку: заголовок, фото, список навыков и ссылку на Telegram.",
+          "quiz": [
+            {
+              "q": "Какой атрибут обязателен у <img>?",
+              "options": [
+                "href",
+                "alt",
+                "target"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Какой тег для ссылок?",
+              "options": [
+                "<link>",
+                "<a>",
+                "<url>"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Семантическая область контента — это…",
+              "options": [
+                "<main>",
+                "<style>",
+                "<script>"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Что делает <ul>?",
+              "options": [
+                "Нумерованный список",
+                "Маркированный список",
+                "Код"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Где верно хранить навигацию?",
+              "options": [
+                "<nav>",
+                "<section>",
+                "<footer>"
+              ],
+              "answer": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Неделя 2 — CSS стилизация",
+      "lessons": [
+        {
+          "id": 3,
+          "title": "Урок 3. Подключение CSS и селекторы",
+          "duration_min": 50,
+          "theory": [
+            "CSS подключают через <link rel=\"stylesheet\" href=\"style.css\"> или через <style> в <head>.",
+            "Типы селекторов: по тегу, классу, id, комбинированные. Наследование и специфичность."
+          ],
+          "code": {
+            "css": "body{font-family:Inter,Arial,sans-serif;background:#0b1020;color:#e7ecff}\nh1{color:#6ae0ff}\n.card{background:rgba(255,255,255,.06);padding:16px;border-radius:12px}"
+          },
+          "task": "Создай style.css, подключи к визитке. Сделай тёмный фон, светлый текст и карточку с обводкой.",
+          "quiz": [
+            {
+              "q": "Как подключить внешний CSS?",
+              "options": [
+                "<style src>",
+                "<css href>",
+                "<link rel=\"stylesheet\">"
+              ],
+              "answer": 2
+            },
+            {
+              "q": "Как выбрать элемент по классу?",
+              "options": [
+                ".class",
+                "#class",
+                "class{}"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Что сильнее по специфичности?",
+              "options": [
+                "Тег",
+                "Класс",
+                "ID"
+              ],
+              "answer": 2
+            },
+            {
+              "q": "Где правильно располагать <link> к CSS?",
+              "options": [
+                "В <body>",
+                "В <head>",
+                "Не важно"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Что такое наследование в CSS?",
+              "options": [
+                "Передача свойств дочерним элементам",
+                "Порядок загрузки",
+                "Размер шрифта"
+              ],
+              "answer": 0
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Урок 4. Отступы и Flexbox",
+          "duration_min": 55,
+          "theory": [
+            "Отступы margin (внешний) и padding (внутренний).",
+            "Flexbox: оси, выравнивание, распределение пространства."
+          ],
+          "code": {
+            "css": ".row{display:flex;gap:16px}\n.card{flex:1;min-width:220px}\n.actions{display:flex;justify-content:space-between;align-items:center}"
+          },
+          "task": "Сверстай три карточки в строке с равными отступами и кнопками действий.",
+          "quiz": [
+            {
+              "q": "За внутренний отступ отвечает…",
+              "options": [
+                "margin",
+                "padding",
+                "gap"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Как включить флекс‑контейнер?",
+              "options": [
+                "display:flex",
+                "flex:1",
+                "justify-content"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Как распределить элементы по краям?",
+              "options": [
+                "space-around",
+                "space-between",
+                "center"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Как задать расстояние между колонками?",
+              "options": [
+                "gap",
+                "padding",
+                "border"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Что делает align-items:center?",
+              "options": [
+                "По оси X",
+                "По поперечной оси",
+                "По оси Z"
+              ],
+              "answer": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Неделя 3 — Продвинутый CSS",
+      "lessons": [
+        {
+          "id": 5,
+          "title": "Урок 5. Позиционирование",
+          "duration_min": 45,
+          "theory": [
+            "position: static/relative/absolute/fixed/sticky; z-index управляет перекрытием.",
+            "Абсолютные элементы позиционируются относительно ближайшего предка с position: relative."
+          ],
+          "code": {
+            "css": ".header{position:fixed;top:0;left:0;right:0;backdrop-filter:blur(6px)}\n.badge{position:absolute;top:8px;right:8px}"
+          },
+          "task": "Сделай фиксированную шапку с логотипом и кнопкой.",
+          "quiz": [
+            {
+              "q": "absolute позиционируется относительно…",
+              "options": [
+                "окна",
+                "ближайшего relative‑родителя",
+                "страницы"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Как зафиксировать блок сверху?",
+              "options": [
+                "position:fixed; top:0;",
+                "position:sticky; top:0;",
+                "Оба варианта"
+              ],
+              "answer": 2
+            },
+            {
+              "q": "За порядок перекрытия отвечает…",
+              "options": [
+                "opacity",
+                "z-index",
+                "overflow"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Что такое stacking context?",
+              "options": [
+                "Контекст наложения слоёв",
+                "Палитра цветов",
+                "Сетка"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Где уместен sticky?",
+              "options": [
+                "Всегда",
+                "Для липких заголовков/меню",
+                "Нигде"
+              ],
+              "answer": 1
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Урок 6. Адаптивность и media queries",
+          "duration_min": 60,
+          "theory": [
+            "Mobile‑first: сначала стили для узких экранов, затем расширения через min-width.",
+            "Используй @media (min-width: 768px) для планшетов, 1024px — для десктопов."
+          ],
+          "code": {
+            "css": "@media (min-width:768px){.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}}\n@media (min-width:1024px){.grid{grid-template-columns:1fr 1fr 1fr}}"
+          },
+          "task": "Сделай сетку карточек 1/2/3 колонки на мобиле/планшете/десктопе.",
+          "quiz": [
+            {
+              "q": "Mobile‑first — это…",
+              "options": [
+                "Сначала десктоп",
+                "Сначала мобильные стили",
+                "Только iOS"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Как сменить колонки на ширине 768px?",
+              "options": [
+                "@media (max-width:768px)",
+                "@media (min-width:768px)",
+                "grid:auto"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Что выбирают чаще?",
+              "options": [
+                "px",
+                "rem/%",
+                "pt"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Для ретины важны…",
+              "options": [
+                "SVG и 2x изображения",
+                "BMP",
+                "GIF"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "meta viewport нужен, чтобы…",
+              "options": [
+                "Ускорить сервер",
+                "Масштабировать страницу на мобиле",
+                "Подключить шрифты"
+              ],
+              "answer": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Неделя 4 — Основы JavaScript",
+      "lessons": [
+        {
+          "id": 7,
+          "title": "Урок 7. Переменные и типы",
+          "duration_min": 50,
+          "theory": [
+            "Переменные: let, const. Типы: string, number, boolean, null, undefined, object.",
+            "Конкатенация и шаблонные строки: `Hello, ${name}`."
+          ],
+          "code": {
+            "js": "const name = \"Виталий\";\nconst age = 18;\nconsole.log(`Привет, ${name}! Тебе ${age}.`);"
+          },
+          "task": "Запроси имя через prompt и выведи приветствие в DOM.",
+          "quiz": [
+            {
+              "q": "Как объявить константу?",
+              "options": [
+                "let x",
+                "const x",
+                "var x"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Шаблонные строки заключаются в…",
+              "options": [
+                "\"\"",
+                "''",
+                "``"
+              ],
+              "answer": 2
+            },
+            {
+              "q": "typeof null возвращает…",
+              "options": [
+                "\"null\"",
+                "\"object\"",
+                "\"undefined\""
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Какая операция склеивает строки?",
+              "options": [
+                "+",
+                "-",
+                "*"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Число из строки получить через…",
+              "options": [
+                "Number()",
+                "toString()",
+                "parseBool()"
+              ],
+              "answer": 0
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Урок 8. Условия и циклы",
+          "duration_min": 55,
+          "theory": [
+            "Условия: if/else, тернарный оператор. Циклы: for, while, for…of.",
+            "Функции: декларации и стрелочные функции."
+          ],
+          "code": {
+            "js": "function sum(n){let s=0;for(let i=1;i<=n;i++) s+=i;return s}\nconsole.log(sum(5)) // 15"
+          },
+          "task": "Сделай калькулятор: ввод двух чисел и операция (+ − × ÷).",
+          "quiz": [
+            {
+              "q": "Что возвращает тернарный оператор?",
+              "options": [
+                "Всегда true",
+                "Одно из двух значений",
+                "Ничего"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Где верный цикл для массива?",
+              "options": [
+                "for…of",
+                "for…in (для объектов)",
+                "while"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Стрелочная функция — это…",
+              "options": [
+                "function(){ }",
+                "() => { }",
+                "def()"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Где лучше хранить однотипные элементы?",
+              "options": [
+                "Object",
+                "Array",
+                "Map не подходит"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Где следует использовать ===?",
+              "options": [
+                "Для строгого сравнения",
+                "Для присваивания",
+                "Для конкатенации"
+              ],
+              "answer": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Неделя 5 — DOM и формы",
+      "lessons": [
+        {
+          "id": 9,
+          "title": "Урок 9. DOM и события",
+          "duration_min": 50,
+          "theory": [
+            "document.querySelector / querySelectorAll — поиск в DOM.",
+            "addEventListener — подписка на события. Классный приём: делегирование событий."
+          ],
+          "code": {
+            "js": "document.querySelector('#btn').addEventListener('click',()=>{\n  document.body.classList.toggle('invert');\n});"
+          },
+          "task": "Кнопка «Сменить тему» переключает класс body (светлая/тёмная).",
+          "quiz": [
+            {
+              "q": "Как получить один элемент по селектору?",
+              "options": [
+                "getElementsByClassName",
+                "querySelector",
+                "querySelectorAll"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Как подписаться на событие?",
+              "options": [
+                "onClick=",
+                "addEventListener",
+                "events.add"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Что такое делегирование событий?",
+              "options": [
+                "Запрет кликов",
+                "Навешивать обработчик на общего родителя",
+                "Мемоизация"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Где хранится DOM?",
+              "options": [
+                "На сервере",
+                "В браузере",
+                "В БД"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Как изменить текст элемента?",
+              "options": [
+                "innerText/innerHTML/textContent",
+                "valueOnly",
+                "setText"
+              ],
+              "answer": 0
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Урок 10. Формы и валидация",
+          "duration_min": 60,
+          "theory": [
+            "Событие submit, preventDefault. Проверка input.value, кастомные сообщения об ошибках.",
+            "Регулярные выражения для e‑mail и телефона."
+          ],
+          "code": {
+            "html": "<form id=\"f\"><input id=\"email\" placeholder=\"Email\"><button>Отправить</button></form>",
+            "js": "f.addEventListener('submit',e=>{e.preventDefault();const v=email.value.trim();if(!/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(v)){alert('Некорректный email');return;}alert('Ок!')})"
+          },
+          "task": "Собери форму заявки (имя, e‑mail, сообщение) с валидацией.",
+          "quiz": [
+            {
+              "q": "Как отменить стандартную отправку формы?",
+              "options": [
+                "return false",
+                "preventDefault",
+                "stopPropagation"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Лучший способ проверки email на фронте?",
+              "options": [
+                "Регулярка + доп.проверки",
+                "Запрос на сервер",
+                "Никак"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Где у инпута текстовое значение?",
+              "options": [
+                "value",
+                "innerText",
+                "textContent"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Что делает trim()?",
+              "options": [
+                "Удаляет пробелы по краям",
+                "Заменяет пробелы",
+                "Обрезает строку до 3 символов"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Где задают плейсхолдер?",
+              "options": [
+                "placeholder",
+                "title",
+                "data-tip"
+              ],
+              "answer": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Неделя 6 — Git и деплой",
+      "lessons": [
+        {
+          "id": 11,
+          "title": "Урок 11. Git основы",
+          "duration_min": 45,
+          "theory": [
+            "Команды: git init, status, add, commit, log. Игнорирование: .gitignore.",
+            "Удалённые репозитории: git remote add origin, git push -u origin main."
+          ],
+          "code": {
+            "bash": "git init\necho node_modules/ > .gitignore\ngit add .\ngit commit -m \"first commit\"\n git remote add origin https://github.com/user/repo.git\ngit push -u origin main"
+          },
+          "task": "Инициализируй репозиторий проекта и сделай первый push на GitHub.",
+          "quiz": [
+            {
+              "q": "Как посмотреть статус?",
+              "options": [
+                "git info",
+                "git status",
+                "git show"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Файл для игнора — это…",
+              "options": [
+                ".ignore",
+                ".gitignore",
+                ".gitconfig"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Как сделать коммит?",
+              "options": [
+                "git commit -m",
+                "git add -m",
+                "git save"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Как привязать удалённый репозиторий?",
+              "options": [
+                "git connect",
+                "git remote add origin <url>",
+                "git link"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Как отправить ветку main?",
+              "options": [
+                "git push origin main",
+                "git upload main",
+                "git send main"
+              ],
+              "answer": 0
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Урок 12. Деплой на GitHub Pages",
+          "duration_min": 55,
+          "theory": [
+            "GitHub Pages: хостинг статических сайтов из ветки main или папки docs.",
+            "Альтернатива: Netlify/Vercel c автодеплоем из git."
+          ],
+          "code": {
+            "text": "В настройках репозитория включи Pages → Source: Deploy from a branch → / (root) или /docs."
+          },
+          "task": "Опубликуй сайт визитки и пришли ссылку. Проверь корректность meta viewport.",
+          "quiz": [
+            {
+              "q": "GitHub Pages подходит для…",
+              "options": [
+                "Статических сайтов",
+                "Баз данных",
+                "Консольных приложений"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Где включить Pages?",
+              "options": [
+                "Settings → Pages",
+                "Deploy → Git",
+                "Issues → Pages"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Что делает авто‑деплой?",
+              "options": [
+                "Создаёт домен",
+                "Собирает и выкладывает сайт при пуше",
+                "Пишет тесты"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Где разместить SPA?",
+              "options": [
+                "Pages/Netlify/Vercel",
+                "Только FTP",
+                "Нигде"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Что обязательно для мобилы?",
+              "options": [
+                "meta viewport",
+                "favicon",
+                "sitemap"
+              ],
+              "answer": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Неделя 7 — Бэкенд основы",
+      "lessons": [
+        {
+          "id": 13,
+          "title": "Урок 13. HTTP и API",
+          "duration_min": 50,
+          "theory": [
+            "HTTP‑методы: GET, POST, PUT, PATCH, DELETE. Коды ответов 2xx/3xx/4xx/5xx.",
+            "Работа с публичным API через fetch. JSON."
+          ],
+          "code": {
+            "js": "fetch('https://example.com/api')\n .then(r=>r.json())\n .then(data=>console.log(data))\n .catch(console.error)"
+          },
+          "task": "Сделай кнопку «Загрузить факты», получай JSON и отрисовывай список.",
+          "quiz": [
+            {
+              "q": "Какой код означает «ОК»?",
+              "options": [
+                "200",
+                "301",
+                "404"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Что делает POST?",
+              "options": [
+                "Получение данных",
+                "Создание/отправка данных",
+                "Удаление"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Какой заголовок для JSON?",
+              "options": [
+                "Content-Type: text/html",
+                "Content-Type: application/json",
+                "Accept: image/png"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Где обрабатывают ошибки промиса?",
+              "options": [
+                "then",
+                "catch",
+                "await"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Что вернёт r.json()?",
+              "options": [
+                "Promise",
+                "Object сразу",
+                "String"
+              ],
+              "answer": 0
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "title": "Урок 14. Мини‑сервер Flask",
+          "duration_min": 60,
+          "theory": [
+            "Flask — минималистичный Python‑фреймворк. Роуты и обработчики запросов.",
+            "Тестирование API через curl/Postman."
+          ],
+          "code": {
+            "python": "from flask import Flask, jsonify, request\napp=Flask(__name__)\n\n@app.get('/api/hello')\ndef hello():\n    return jsonify({'msg':'Hello'})\n\n@app.post('/api/echo')\ndef echo():\n    data=request.get_json()\n    return jsonify({'you_sent':data})\n\nif __name__=='__main__':\n    app.run(debug=True)"
+          },
+          "task": "Подними Flask‑сервер локально и ответь на /api/hello и /api/echo.",
+          "quiz": [
+            {
+              "q": "Flask — это…",
+              "options": [
+                "БД",
+                "Фреймворк Python",
+                "СУБД"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Маршрут в Flask описывают…",
+              "options": [
+                "@app.route",
+                "@flask.get",
+                "@http.get"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Как вернуть JSON?",
+              "options": [
+                "jsonify(...)",
+                "return dict",
+                "print(...)"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Какой метод для чтения тела JSON?",
+              "options": [
+                "request.body",
+                "request.get_json()",
+                "request.json()"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Где запускать dev‑сервер?",
+              "options": [
+                "app.debug()",
+                "app.run(debug=True)",
+                "flask prod"
+              ],
+              "answer": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Неделя 8 — Финал и защита",
+      "lessons": [
+        {
+          "id": 15,
+          "title": "Урок 15. Сборка проекта и UX",
+          "duration_min": 60,
+          "theory": [
+            "Структура проекта: assets, css, js, pages. Повторное использование компонентов.",
+            "UX‑чеклист: читабельность, контраст, размеры клика, скорость загрузки."
+          ],
+          "code": {
+            "text": "Проверь Lighthouse (Performance/Accessibility/Best Practices/SEO). Улучши оценки до 90+."
+          },
+          "task": "Собери портфолио‑сайт из блоков: шапка, геро‑секция, проекты, контактная форма.",
+          "quiz": [
+            {
+              "q": "Что НЕ относится к UX?",
+              "options": [
+                "Контраст",
+                "Скорость загрузки",
+                "Налоговая ставка"
+              ],
+              "answer": 2
+            },
+            {
+              "q": "Где проверить перформанс?",
+              "options": [
+                "Lighthouse",
+                "MongoDB",
+                "Docker"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Минификация — это…",
+              "options": [
+                "Уменьшение размера файлов",
+                "Сжатие изображений",
+                "Сокрытие кода"
+              ],
+              "answer": 0
+            },
+            {
+              "q": "Какая высота клика удобна на мобиле?",
+              "options": [
+                "16px",
+                "24px+",
+                "8px"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Что улучшает LCP?",
+              "options": [
+                "Отложенная загрузка тяжёлых блоков",
+                "Удаление HTML",
+                "Больше CSS"
+              ],
+              "answer": 0
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "title": "Урок 16. Финальный тест и защита",
+          "duration_min": 60,
+          "theory": [
+            "Презентация проекта: цель, стек, демо, код.",
+            "Финальный тест по всем темам. Порог 70%."
+          ],
+          "code": {
+            "text": "Подготовь README с инструкцией запуска и ссылкой на деплой."
+          },
+          "task": "Защити проект и отправь ссылку наставнику в Telegram.",
+          "quiz": [
+            {
+              "q": "README должен включать…",
+              "options": [
+                "Личный телефон",
+                "Инструкции и ссылки",
+                "Секретные ключи"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Порог прохождения курса:",
+              "options": [
+                "50%",
+                "60%",
+                "70%"
+              ],
+              "answer": 2
+            },
+            {
+              "q": "Где хранить секреты?",
+              "options": [
+                "В коде",
+                "В .env/CI‑секретах",
+                "В README"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Что показать на защите?",
+              "options": [
+                "Только код",
+                "Демо + код + ответы",
+                "Только демо"
+              ],
+              "answer": 1
+            },
+            {
+              "q": "Что после защиты?",
+              "options": [
+                "Ничего",
+                "Релиз/улучшения/резюме",
+                "Удалить проект"
+              ],
+              "answer": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

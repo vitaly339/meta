@@ -1,0 +1,41 @@
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:#0a0f1f;color:#e7ecff;overflow-x:hidden}
+a{color:#8af5ff;text-decoration:none}
+.header{position:sticky;top:0;z-index:10; backdrop-filter: blur(8px); background: rgba(10,15,31,.6); border-bottom:1px solid rgba(255,255,255,.08); display:flex; justify-content:space-between; align-items:center; padding:14px 18px}
+.brand{display:flex; gap:12px; align-items:center}
+.logo{display:inline-grid; place-items:center; width:40px; height:40px; border-radius:10px; background: radial-gradient(120px 40px at 50% 10%, #5ef 0%, #0ff0 50%, transparent 60%); box-shadow: 0 0 22px #5ef88a55 inset, 0 0 40px #5ef88a35}
+h1{font-size:18px; margin:0 0 2px 0; letter-spacing:.3px}
+.container{display:grid; grid-template-columns: 320px 1fr; gap:20px; max-width:1200px; margin:28px auto; padding: 0 18px}
+.toc{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:12px; max-height: calc(100vh - 160px); overflow:auto}
+.toc h3{margin:10px 10px; font-size:14px; color:#9fb2e3}
+.toc button{width:100%; text-align:left; background:transparent; border:0; color:#e7ecff; padding:10px 12px; border-radius:10px; cursor:pointer; transition: transform .08s ease, background .2s}
+.toc button:hover{background:rgba(255,255,255,.08); transform:translateY(-1px)}
+.toc button.active{background:linear-gradient(90deg, rgba(106,224,255,.2), rgba(138,245,255,.08)); outline:1px solid rgba(106,224,255,.35)}
+.lesson{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:18px; min-height:420px}
+.lesson h2{margin-top:0}
+.badges{display:flex; gap:10px; align-items:center; color:#9fb2e3; font-size:13px}
+.card{background:rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.06); padding:14px; border-radius:12px; margin:12px 0}
+pre{background:#0b132a; padding:14px; border-radius:10px; overflow:auto}
+code{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:13px}
+.row{display:flex; gap:12px; flex-wrap:wrap}
+.btn{background:linear-gradient(90deg, #5ef, #8ff); border:0; color:#001216; padding:10px 14px; border-radius:10px; cursor:pointer; font-weight:700; transition: transform .08s ease, box-shadow .2s}
+.btn:hover{transform: translateY(-1px); box-shadow:0 10px 30px rgba(106,224,255,.25)}
+.btn.ghost{background:transparent; color:#8af5ff; border:1px solid rgba(106,224,255,.4)}
+.footer{position:sticky; bottom:0; z-index:10; display:flex; justify-content:space-between; align-items:center; gap:10px; padding:12px 18px; border-top:1px solid rgba(255,255,255,.08); background: rgba(10,15,31,.7); backdrop-filter: blur(8px)}
+.cta{display:flex; gap:10px; align-items:center}
+.btn.like{display:flex; gap:6px; align-items:center}
+.progress-wrap{min-width:260px}
+.progress{height:8px; background:rgba(255,255,255,.08); border-radius:999px; overflow:hidden; margin-top:6px}
+#progressBar{height:100%; background:linear-gradient(90deg,#45f,#5ef); width:0%}
+#matrix{position:fixed; inset:0; z-index:-2}
+.glow{position:fixed; inset:-30%; background: radial-gradient(600px 300px at 20% 10%, rgba(106,224,255,.15), transparent 60%), radial-gradient(600px 300px at 80% 90%, rgba(138,245,255,.12), transparent 60%); z-index:-3}
+.invert{filter: invert(1) hue-rotate(180deg)}
+.quiz{margin-top:16px}
+.quiz h3{margin:6px 0 10px 0}
+.quiz .q{padding:12px; border-radius:10px; background:rgba(0,0,0,.25); margin:10px 0; border:1px solid rgba(255,255,255,.06)}
+.quiz label{display:block; padding:6px 8px; border-radius:8px; cursor:pointer}
+.quiz input{margin-right:8px}
+.quiz label:hover{background:rgba(255,255,255,.06)}
+.quiz .result{margin-top:12px; font-weight:700}
+hr{border:0; border-top:1px solid rgba(255,255,255,.08); margin:14px 0}
